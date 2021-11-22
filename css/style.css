@@ -443,7 +443,7 @@ p {
 .section .title>p {
     font-size: 20px;
     color: #FFF;
-    font-weight: lighter;
+    font-weight: 400;
 }
 
 .primary-section {
@@ -465,7 +465,7 @@ p {
 }
 
 .primary-section h1 {
-    color: rgb(214, 147, 47);
+    color: #fb774d;
 }
 
 .secondary-section {
@@ -491,8 +491,8 @@ p {
 
 .third-section {
     padding-bottom: 70px;
-    background: #686868 url(../images/) no-repeat center;
-    border-top: 6px solid#fb774d;
+    background: #f1f1f1 url(../images/) no-repeat center;
+    border-top: 6px solid #bbbbbb;
 }
 
 .third-section .container {
@@ -502,6 +502,10 @@ p {
 
 .third-section .title {
     border-bottom: 1px solid #A1AAB7;
+}
+
+.third-section h3 {
+    color: black;
 }
 
 .sub-section {
@@ -947,7 +951,8 @@ p {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .map-wrapper:nth-child(1) {}
