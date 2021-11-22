@@ -53,9 +53,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-    font-weight: normal;
-}
+h6 {}
 
 h1 {
     margin: 10px;
@@ -438,7 +436,6 @@ p {
 }
 
 .section .title h1 {
-    font-weight: normal;
     margin-bottom: 20px;
     padding: 0;
 }
@@ -494,7 +491,7 @@ p {
 
 .third-section {
     padding-bottom: 70px;
-    background: #878c91 url(../images/) no-repeat center;
+    background: #686868 url(../images/) no-repeat center;
     border-top: 6px solid#fb774d;
 }
 
@@ -505,7 +502,6 @@ p {
 
 .third-section .title {
     border-bottom: 1px solid #A1AAB7;
-    color: #fb774d;
 }
 
 .sub-section {
@@ -948,8 +944,10 @@ p {
 
 .map-wrapper {
     position: relative;
-    height: 400px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .map-wrapper:nth-child(1) {}
