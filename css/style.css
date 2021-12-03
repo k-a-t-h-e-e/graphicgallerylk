@@ -710,7 +710,7 @@ p {
 }
 
 .client-slider img:hover {
-    background-color: #fb774d;
+    transform: scale(0.94);
 }
 
 .client-nav {
