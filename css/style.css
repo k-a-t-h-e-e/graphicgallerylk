@@ -43,6 +43,11 @@ a {
     text-decoration: none;
 }
 
+.project-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
 a:hover {
     color: #fb774d;
     text-decoration: none;
