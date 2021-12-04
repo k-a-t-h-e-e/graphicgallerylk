@@ -191,6 +191,8 @@
     /*
 Sand mail
 **********************************************************************/
+const url = 'https://script.google.com/macros/s/AKfycbyjQmVUOKkb71CPkx_fIjQcOoFIZASCSZt1BAYlI8NcQ6lhqncegGlnhx17YRGR6q4ZpA/exec'
+
 $("#send-mail").click(function () {
 
         var name = $('input#name').val(); // get the value of the input field
@@ -234,7 +236,18 @@ $("#send-mail").click(function () {
 
         if (error == false) {
             var dataString = $('#contact-form').serialize(); // Collect data from form
-            $.ajax({
+            console.log(dataString)
+
+            var jqxhr = $.ajax({
+                url: url,
+                method: "GET",
+                dataType: "json",
+                data: dataString
+              }).success(
+                // do something
+              );
+
+           /* $.ajax({
                 type: "POST",
                 url: $('#contact-form').attr('action'),
                 data: dataString,
@@ -255,6 +268,7 @@ $("#send-mail").click(function () {
                 }
             });
             return false;
+            */
         }
 
         return false; // stops user browser being directed to the php file
