@@ -6,6 +6,7 @@
  * Author URL: http://graphberry.com
  * License: http://graphberry.com/pages/license
  */
+
  jQuery(document).ready(function ($) {
 
     var lastId,
@@ -240,9 +241,23 @@ $("#send-mail").click(function () {
 
             var jqxhr = $.ajax({
                 url: url,
+                crossDomain: true,
                 method: "GET",
-                dataType: "json",
-                data: dataString
+                dataType: 'jsonp',
+                data: dataString,
+                cors: true ,
+                contentType:'application/json',
+                secure: true,
+                headers: {
+                  'Access-Control-Allow-Origin': '*',
+                },
+                beforeSend: function (xhr) {
+                  xhr.setRequestHeader ("Authorization", "Basic " + btoa(""));
+                },
+                success: function (data){
+                  console.log(data);                  
+                }
+               
               }).success(
                 // do something
               );

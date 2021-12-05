@@ -1,5 +1,5 @@
 <?php
-
+ header("Access-Control-Allow-Origin: *");
 include 'functions.php';
 
 if (!empty($_POST)){
